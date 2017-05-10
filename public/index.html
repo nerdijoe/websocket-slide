@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <div id="app">
+
+      <!-- <form class="ui huge form" v-on:onkeypress.prevent="changeMessage" >
+
+        <input type="text" name="message" v-model="form.message" placeholder="Enter message">
+        <button type="submit" name="button">Change</button>
+
+      </form> -->
+
+      <input type="text" name="message" v-model="form.message" @keyup="changeMessage" placeholder="Enter message">
+
+      <p>
+        {{message}}
+      </p>
+      <!-- <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button> -->
+      <button class="w3-button w3-display-left" @click="goLeft">&#10094;</button>
+      <button class="w3-button w3-display-right" @click="goRight">&#10095;</button>
+
+      <!-- <img class="mySlides" src="./assets/img/1.jpg"> -->
+      <!-- <img class="mySlides" src="./assets/img/2.jpg">
+      <img class="mySlides" src="./assets/img/3.jpg">
+      <img class="mySlides" src="./assets/img/4.jpg">
+      <img class="mySlides" src="./assets/img/5.jpg"> -->
+      <p><img v-bind:src='"./assets/img/"+images[image_index]'></p>
+
+
+
+    </div>
+
+  </body>
+  <script type="text/javascript" src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/rudy.js"></script>
+
+
+</html>
