@@ -6,4 +6,4 @@ cd public
 live-server
 ```
 
-**Open http://localhost:3000**
+**Open http://localhost:8080**
